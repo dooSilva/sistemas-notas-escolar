@@ -63,7 +63,7 @@ def sistemaNota():
 
     if media >= 8.0:
         print(f"{nome} APROVADO")
-    elif 7.0 <= media < 8.0:
+    elif 7.0 <= media < 7.9:
         print(f"{nome} EM RECUPERAÇÃO")
     else:
         print(f"{nome} REPROVADO")

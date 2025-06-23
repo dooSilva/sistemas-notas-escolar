@@ -55,17 +55,20 @@ def sistemaNota():
     ciencias = float(input("Digite a nota de Ciências: "))
     historia = float(input("Digite a nota de História: "))
     ingles = float(input("Digite a nota de Inglês: "))
-    input("Pressione ENTER para finalizar.....")
 
-    calculo = matematica + portugues + ingles + historia + ciencias
+    media = (matematica + portugues + ciencias + historia + ingles) / 5
+
+    print(f"\nMÉDIA FINAL: {media:.2f}")
 
 
-    if calculo >= 350:
+    if media >= 8.0:
         print(f"{nome} APROVADO")
-    elif 250 <= calculo < 350:
+    elif 7.0 <= media < 8.0:
         print(f"{nome} EM RECUPERAÇÃO")
     else:
         print(f"{nome} REPROVADO")
+
+    input("Pressione ENTER para finalizar.....")
 #FUNÇÃO DE APROVAR O ALUNO
 ##############################################################
 
@@ -78,6 +81,7 @@ def autenticacao(login, senha):
     if login == log and senha == passd:
         print("Bem vindo")
         sistemaNota()
+        return True
     else:
         print("Falha de autenticação")
         return False
